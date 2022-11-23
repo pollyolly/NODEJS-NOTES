@@ -22,5 +22,17 @@
   },
 ```
 
+### Security
+[Security](https://expressjs.com/en/advanced/best-practice-security.html)
+
+### Performance
+
+[Performance](https://expressjs.com/en/advanced/best-practice-performance.html)
+
+### Database Health Check
+[Health Check](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html)
+
+[Health Check Sample](https://github.com/godaddy/terminus/blob/main/example/mysql/index.js)
+
 ### References
 [Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
