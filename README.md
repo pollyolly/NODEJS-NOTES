@@ -21,3 +21,6 @@
     "start": "node server.js"
   },
 ```
+
+### References
+[Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
