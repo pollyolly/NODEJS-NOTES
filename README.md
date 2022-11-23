@@ -48,4 +48,6 @@ PM2
 [Database Health Check Sample](https://github.com/godaddy/terminus/blob/main/example/mysql/index.js)
 
 ### References
+[Express Js Samples](https://github.com/expressjs/express/tree/master/examples/route-separation)
+
 [NodeJs Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
