@@ -51,3 +51,5 @@ PM2
 [Express Js Samples](https://github.com/expressjs/express/tree/master/examples/route-separation)
 
 [NodeJs Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
+
+[Wiki Api](https://kanasimi.github.io/wikiapi/Wikiapi.html)
