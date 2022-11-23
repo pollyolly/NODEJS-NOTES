@@ -1,5 +1,13 @@
 ## NODEJS
-### Package setup
+
+### Requirements
+```
+NginX
+NodeJs
+Posgres
+PM2
+```
+### package.json
 ```
 {
   "name": "Iskomunidad Api",
@@ -21,6 +29,9 @@
     "start": "node server.js"
   },
 ```
+### Deployment 
+
+[NodeJs Deployment](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04)
 
 ### Security
 [Security](https://expressjs.com/en/advanced/best-practice-security.html)
@@ -29,10 +40,12 @@
 
 [Performance](https://expressjs.com/en/advanced/best-practice-performance.html)
 
+[NginX Caching](https://serversforhackers.com/c/nginx-caching)
+
 ### Database Health Check
 [Health Check](https://expressjs.com/en/advanced/healthcheck-graceful-shutdown.html)
 
-[Health Check Sample](https://github.com/godaddy/terminus/blob/main/example/mysql/index.js)
+[Database Health Check Sample](https://github.com/godaddy/terminus/blob/main/example/mysql/index.js)
 
 ### References
-[Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
+[NodeJs Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
