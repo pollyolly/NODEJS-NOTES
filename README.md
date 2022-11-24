@@ -36,6 +36,7 @@ PM2
 ### Security
 [Security](https://expressjs.com/en/advanced/best-practice-security.html)
 
+[JWT Login](https://medium.com/@prashantramnyc/authenticate-rest-apis-in-node-js-using-jwt-json-web-tokens-f0e97669aad3)
 ### Performance
 
 [Performance](https://expressjs.com/en/advanced/best-practice-performance.html)
