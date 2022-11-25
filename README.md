@@ -16,7 +16,7 @@ Editable json file
   "description": "Public access of Iskomunidad Api",
   "main": "./server.js",
   "script": {
-    "start": "node server.js"
+    "start": "node ./server.js"
   },
   "keywords": [],
   "author": "John Mark Roco",
@@ -35,8 +35,12 @@ Editable json file
 This line used for command: $npm start
 ```
 "script": {
-    "start": "node server.js"
+    "start": "node ./server.js"
   },
+```
+This line required for command: $nodemon start
+```
+"main": "./server.js",
 ```
 Nodemon (automatic restart nodejs server)
 ```
