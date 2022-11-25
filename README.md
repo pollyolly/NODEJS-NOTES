@@ -8,6 +8,7 @@ Postgres or MySQL
 PM2
 ```
 ### package.json
+Editable json file
 ```
 {
   "name": "Iskomunidad Api",
