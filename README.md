@@ -4,7 +4,7 @@
 ```
 NginX
 NodeJs
-Posgres
+Postgres or MySQL
 PM2
 ```
 ### package.json
@@ -20,14 +20,26 @@ PM2
   "keywords": [],
   "author": "John Mark Roco",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "helmet": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
     "wikiapi": "^1.19.4"
   }
 }
-/* This line used for command: $npm start */
+```
+This line used for command: $npm start
+```
 "script": {
     "start": "node server.js"
   },
+```
+### Generate Random Strings
+```
+$node
+$require("crypto").randomBytes(64).toString("hex")
 ```
 ### Deployment 
 
