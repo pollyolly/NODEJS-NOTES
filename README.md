@@ -43,6 +43,20 @@ $require("crypto").randomBytes(64).toString("hex")
 
 *Can be used for AccessToken, RefreshToken in .env
 ```
+### Post Man Settings
+```
+POST: http://localhost:9999/AccountAuth
+Body: raw: JSON: 
+             {
+	              "username":"testuser",
+	              "password":"testuserpass"
+             }
+GET: http://localhost:9999/AccountAuth
+Params: Query Params: 
+             key: 'test' value: 'test'
+             key: 'test' value: 'test'
+```
+
 ### Deployment 
 
 [NodeJs Deployment](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04)
