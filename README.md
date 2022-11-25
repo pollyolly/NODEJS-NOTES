@@ -51,7 +51,8 @@ $nodemon ./server.js
 ### Generate Random Strings
 ```
 $node
-$require("crypto").randomBytes(64).toString("hex")
+Welcome to Node.js v16.15.0.
+>require("crypto").randomBytes(64).toString("hex")
 
 *Can be used for AccessToken, RefreshToken in .env
 ```
