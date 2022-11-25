@@ -13,7 +13,7 @@ PM2
   "name": "Iskomunidad Api",
   "version": "1.0.0",
   "description": "Public access of Iskomunidad Api",
-  "main": "/server.js",
+  "main": "./server.js",
   "script": {
     "start": "node server.js"
   },
@@ -35,6 +35,12 @@ This line used for command: $npm start
 "script": {
     "start": "node server.js"
   },
+```
+Nodemon (automatic restart nodejs server)
+```
+$npm install -g nodemon
+$nodemon start
+$nodemon ./server.js
 ```
 ### Generate Random Strings
 ```
