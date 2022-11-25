@@ -40,6 +40,8 @@ This line used for command: $npm start
 ```
 $node
 $require("crypto").randomBytes(64).toString("hex")
+
+*Can be used for AccessToken, RefreshToken etc.
 ```
 ### Deployment 
 
