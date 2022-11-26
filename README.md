@@ -72,6 +72,9 @@ GET: http://localhost:9999/AccountAuth
 Params: Query Params: 
              key: 'test' value: 'test'
              key: 'test' value: 'test'
+
+URL GET: http://localhost:9999/PageEdit/text/:pagetext
+To GET: http://localhost:9999/PageEdit/text/sampletextvalue
 ```
 Authorizaton header
 ```
