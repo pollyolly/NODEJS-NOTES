@@ -57,6 +57,7 @@ Welcome to Node.js v16.15.0.
 *Can be used for AccessToken, RefreshToken in .env
 ```
 ### Post Man Settings
+Post Request
 ```
 POST: http://localhost:9999/AccountAuth
 Body: raw: JSON: 
@@ -64,12 +65,19 @@ Body: raw: JSON:
 	              "username":"testuser",
 	              "password":"testuserpass"
              }
+```
+Get Request
+```
 GET: http://localhost:9999/AccountAuth
 Params: Query Params: 
              key: 'test' value: 'test'
              key: 'test' value: 'test'
 ```
-
+Authorizaton header
+```
+GET: http://localhost:9999/PageEdit/text/sdfsadfsadf
+Auth: Type: Bearer Token -> Token: <access-token>
+```
 ### Deployment 
 
 [NodeJs Deployment](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04)
