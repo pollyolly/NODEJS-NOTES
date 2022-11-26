@@ -81,6 +81,8 @@ Authorizaton header
 GET: http://localhost:9999/PageEdit/text/sdfsadfsadf
 Auth: Type: Bearer Token -> Token: <access-token>
 ```
+### ExpressJs Responses
+[ExpressJs Responses](https://stackoverflow.com/questions/7042340/error-cant-set-headers-after-they-are-sent-to-the-client)
 ### Values allowed in JWT
 [Values allowed in JWT](http://www.iana.org/assignments/jwt/jwt.xhtml)
 
