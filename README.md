@@ -95,3 +95,7 @@ Params: Query Params:
 [NodeJs Clean Architecture](https://www.youtube.com/watch?v=VmY22KuRDbk)
 
 [Wiki Api](https://kanasimi.github.io/wikiapi/Wikiapi.html)
+
+### JAVASCRIPT VISUALIZATION
+
+[JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341)
