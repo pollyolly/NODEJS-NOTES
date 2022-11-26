@@ -81,6 +81,9 @@ Authorizaton header
 GET: http://localhost:9999/PageEdit/text/sdfsadfsadf
 Auth: Type: Bearer Token -> Token: <access-token>
 ```
+### Values allowed in JWT
+[Values allowed in JWT](http://www.iana.org/assignments/jwt/jwt.xhtml)
+
 ### Deployment 
 
 [NodeJs Deployment](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-18-04)
