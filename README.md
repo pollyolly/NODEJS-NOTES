@@ -105,6 +105,9 @@ Auth: Type: Bearer Token -> Token: <access-token>
 
 [Database Health Check Sample](https://github.com/godaddy/terminus/blob/main/example/mysql/index.js)
 
+### Database CRUD
+[CRUD REST API](https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/)
+
 ### References
 [Express Js Samples](https://github.com/expressjs/express/tree/master/examples/route-separation)
 
