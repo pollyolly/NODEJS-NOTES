@@ -1,12 +1,15 @@
 ## NODEJS
 
 ### Requirements
-```
-NginX
-NodeJs
-Postgres or MySQL
-PM2
-```
+
+[NGINX Setup for PM2](https://pm2.keymetrics.io/docs/tutorials/pm2-nginx-production-setup)
+
+[NodeJs](https://www.tutorialspoint.com/nodejs/index.htm)
+
+[Postgresql](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-node-js-on-ubuntu-20-04)
+
+[PM2](https://pm2.keymetrics.io/docs/usage/specifics/)
+## Development Setup
 ### package.json
 Editable json file
 ```
@@ -48,6 +51,7 @@ $npm install -g nodemon
 $nodemon start
 $nodemon ./server.js
 ```
+## Tutorials
 ### Generate Random Strings
 ```
 $node
