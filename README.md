@@ -51,6 +51,22 @@ $npm install -g nodemon
 $nodemon start
 $nodemon ./server.js
 ```
+## Deployment
+PM2
+```
+$pm2 start server.js --name wiki-api -- --port 9999 --watch --ignore-watch="node_modules" 
+
+--name         -> Name 
+-- --port 9999 -> Port going to use
+--watch        -> Enable live update
+--ignore-watch="node_modules" -> Di ko pa alam
+
+```
+```
+$pm2 list
+
+$pm2 delete 0
+```
 ## Tutorials
 ### Generate Random Strings
 ```
