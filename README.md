@@ -53,6 +53,12 @@ $npm install -g nodemon
 $nodemon start
 $nodemon ./server.js
 ```
+Security
+```
+bcrypt
+helmet
+authbind
+```
 ## Deployment
 PM2
 ```
