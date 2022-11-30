@@ -79,9 +79,9 @@ start server.js               -> server.js (nodejs server file)
 
 ```
 ```
-$pm2 list       -> show list of running pm2
+$pm2 list       -> Show list of running pm2
 
-$pm2 delete 0   -> delete pm2 by id
+$pm2 delete 0   -> Delete pm2 by id
 ```
 ## Tutorials
 ### Generate Random Strings
