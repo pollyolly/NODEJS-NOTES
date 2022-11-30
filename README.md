@@ -76,12 +76,27 @@ start server.js               -> server.js (nodejs server file)
 -- --port 9999                -> Run in port 9999
 --watch                       -> Enable live update
 --ignore-watch="node_modules" -> Do not read directory
-
+--log /var/log/nginx/pm2.logs -> Save logs to
 ```
 ```
-$pm2 list       -> Show list of running pm2
+$pm2 list       	# Show pm2 list of processes
+$pm2 delete 0   	# Delete process from pm2 list by id
+```
+```
+$pm2 stop 0             # Stop specific process id
+$pm2 restart 0 		# Restart specific process id
+```
+## Performance
+Start automatic clustering (This will act like Load Balancer and automatically share connection to spawned processes)
+```
+$pm2 start app.js -i max
+```
+## Troubleshooting
+Nginx log: Conflict 0.0.0.0:[::]80
+```
+Nginx Config should have a server name.
 
-$pm2 delete 0   -> Delete pm2 by id
+Fix: server_name sample.ph
 ```
 ## Tutorials
 ### Generate Random Strings
