@@ -60,7 +60,30 @@ helmet
 authbind
 ```
 ## Deployment
-PM2
+$npm install pm2@latest -g
+
+$cd wiki_api/
+
+```
+//wiki_api/ecosystem.config.js
+require('dotenv').config();
+
+module.exports = {
+  apps: [
+    {
+      name: 'wiki-api',
+      script: './server.js',
+      watch: true,
+      env: {
+        PORT: process.env.PORT,
+        NODE_ENV: 'production',
+      },
+    },
+  ],
+};
+```
+$pm2 start
+
 ```
 Running PM2:
 ┌─────┬─────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
@@ -68,7 +91,7 @@ Running PM2:
 ├─────┼─────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
 │ 0   │ wiki-api    │ default     │ 1.0.0   │ fork    │ 181      │ 0s     │ 0    │ online    │ 0%       │ 9.9mb    │ root     │ enabled  │
 └─────┴─────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
-Command:
+Other Command:
 $pm2 start server.js --name wiki-api -- --port 9999 --watch --ignore-watch="node_modules" 
 
 start server.js               -> server.js (nodejs server file)
@@ -88,8 +111,16 @@ $pm2 restart 0 		# Restart specific process id
 ```
 ## Performance
 Start automatic clustering (This will act like Load Balancer and automatically share connection to spawned processes)
+
+[Source Link](https://pm2.keymetrics.io/docs/usage/quick-start/)
 ```
 $pm2 start app.js -i max
+
+Other Commands:
+pm2 start app.js -i 0        # Will start maximum processes with LB depending on available CPUs
+pm2 start app.js -i max      # Same as above, but deprecated.
+pm2 scale app +3             # Scales `app` up by 3 workers
+pm2 scale app 2              # Scales `app` up or down to 2 workers total
 ```
 ## Troubleshooting
 Nginx log: Conflict 0.0.0.0:[::]80
