@@ -9,6 +9,8 @@
 [Postgresql](https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-node-js-on-ubuntu-20-04)
 
 [PM2](https://pm2.keymetrics.io/docs/usage/specifics/)
+
+[AuthBind](https://pm2.keymetrics.io/docs/usage/specifics/)
 ## Development Setup
 ### package.json
 Editable json file
