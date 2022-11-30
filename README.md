@@ -109,6 +109,45 @@ $pm2 delete 0   	# Delete process from pm2 list by id
 $pm2 stop 0             # Stop specific process id
 $pm2 restart 0 		# Restart specific process id
 ```
+### NginX
+```
+upstream wiki_api_upstream {
+        server 127.0.0.1:9999; #NodeJs / PM2 local and Port
+        #keepalive_timeout 70;
+        keepalive 70;
+}
+
+server {
+        listen 80;
+        listen [::]:80;
+        index index.html index.htm;
+
+        server_name wikiapi.ph;
+        #server_name _; issue conflict to 0.0.0.0:[::]80
+
+        access_log /var/log/nginx/wiki_api.log;
+        error_log /var/log/nginx/wiki_api.log;
+
+        location / {
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header Host $http_host;
+
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+
+                proxy_pass http://wiki_api_upstream/; #NodeJs / PM2 local and Port
+                #proxy_pass http://127.0.0.1:9999;
+                proxy_redirect off;
+                proxy_read_timeout 240s;
+
+                proxy_buffers 4 16k;
+                proxy_buffer_size 16k;
+        }
+}
+```
+
 ## Performance
 Start automatic clustering (This will act like Load Balancer and automatically share connection to spawned processes)
 
