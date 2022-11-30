@@ -147,6 +147,25 @@ server {
         }
 }
 ```
+#### Do not Run NodeJs as Root (But only root can bind to port 80). This is the fix below.
+[Source link](https://pm2.keymetrics.io/docs/usage/specifics/)
+```
+sudo apt-get install authbind
+sudo touch /etc/authbind/byport/80
+sudo chown www-data /etc/authbind/byport/80		# Important: www-data will be running pm2
+sudo chmod 755 /etc/authbind/byport/80
+```
+Create an alias for pm2
+```
+$vi ~/.bashrc
+Then add the line below:
+
+alias pm2='authbind --deep pm2'
+
+Run the commands below: 
+$source ~/.bashrc
+$pm2 update
+```
 #### Automatic Start UP / Reboot
 [Source link](https://pm2.keymetrics.io/docs/usage/startup/)
 ```
