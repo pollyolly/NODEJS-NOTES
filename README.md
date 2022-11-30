@@ -147,7 +147,15 @@ server {
         }
 }
 ```
+#### Automatic Start UP / Reboot
+[Source link](https://pm2.keymetrics.io/docs/usage/startup/)
+```
+$pm2 startup
 
+$pm2 save		# Save after setup
+
+$pm2 resurrect		# Manually bring back previous processes
+```
 ## Performance
 Start automatic clustering (This will act like Load Balancer and automatically share connection to spawned processes)
 
