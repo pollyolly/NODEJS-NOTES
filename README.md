@@ -54,18 +54,26 @@ $nodemon ./server.js
 ## Deployment
 PM2
 ```
+Running PM2:
+┌─────┬─────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
+│ id  │ name        │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
+├─────┼─────────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│ 0   │ wiki-api    │ default     │ 1.0.0   │ fork    │ 181      │ 0s     │ 0    │ online    │ 0%       │ 9.9mb    │ root     │ enabled  │
+└─────┴─────────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+Command:
 $pm2 start server.js --name wiki-api -- --port 9999 --watch --ignore-watch="node_modules" 
 
---name         -> Name 
--- --port 9999 -> Port going to use
---watch        -> Enable live update
---ignore-watch="node_modules" -> Di ko pa alam
+start server.js               -> server.js (nodejs server file)
+--name wiki-api               -> Name of the program 
+-- --port 9999                -> Run in port 9999
+--watch                       -> Enable live update
+--ignore-watch="node_modules" -> Do not read directory
 
 ```
 ```
-$pm2 list
+$pm2 list       -> show list of running pm2
 
-$pm2 delete 0
+$pm2 delete 0   -> delete pm2 by id
 ```
 ## Tutorials
 ### Generate Random Strings
