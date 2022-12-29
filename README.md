@@ -266,3 +266,6 @@ Auth: Type: Bearer Token -> Token: <access-token>
 ### JAVASCRIPT VISUALIZATION
 
 [JavaScript Visualized Series' Articles](https://dev.to/lydiahallie/series/3341)
+
+### NodeJs Full Tutorial
+[Node.js Full Course for Beginners | Complete All-in-One Tutorial | 7 Hours](https://www.youtube.com/watch?v=f2EqECiTBL8)
