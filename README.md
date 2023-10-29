@@ -14,7 +14,7 @@
 ## Development Setup
 ### package.json
 Editable json file
-```
+```json
 {
   "name": "Iskomunidad Api",
   "version": "1.0.0",
@@ -38,23 +38,23 @@ Editable json file
 }
 ```
 This line used for command: $npm start
-```
+```javascript
 "script": {
     "start": "node ./server.js"
   },
 ```
 This line required for command: $nodemon start
-```
+```json
 "main": "./server.js",
 ```
 Nodemon (automatic restart nodejs server)
-```
+```vim
 $npm install -g nodemon
 $nodemon start
 $nodemon ./server.js
 ```
 Security
-```
+```vim
 bcrypt
 helmet
 authbind
@@ -64,7 +64,7 @@ $npm install pm2@latest -g
 
 $cd wiki_api/
 
-```
+```javascript
 //wiki_api/ecosystem.config.js
 require('dotenv').config();
 
@@ -84,7 +84,7 @@ module.exports = {
 ```
 $pm2 start
 
-```
+```vim
 Running PM2:
 ┌─────┬─────────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id  │ name        │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
@@ -101,16 +101,16 @@ start server.js               -> server.js (nodejs server file)
 --ignore-watch="node_modules" -> Do not read directory
 --log /var/log/nginx/pm2.logs -> Save logs to
 ```
-```
+```vim
 $pm2 list       	# Show pm2 list of processes
 $pm2 delete 0   	# Delete process from pm2 list by id
 ```
-```
+```vim
 $pm2 stop 0             # Stop specific process id
 $pm2 restart 0 		# Restart specific process id
 ```
 ### NginX
-```
+```vim
 upstream wiki_api_upstream {
         server 127.0.0.1:9999; #NodeJs / PM2 local and Port
         #keepalive_timeout 70;
@@ -149,14 +149,14 @@ server {
 ```
 #### Do not Run NodeJs as Root (But only root can bind to port 80). This is the fix below.
 [Source link](https://pm2.keymetrics.io/docs/usage/specifics/)
-```
-sudo apt-get install authbind
-sudo touch /etc/authbind/byport/80
-sudo chown www-data /etc/authbind/byport/80		# Important: www-data will be running pm2
-sudo chmod 755 /etc/authbind/byport/80
+```vim
+$sudo apt-get install authbind
+$sudo touch /etc/authbind/byport/80
+$sudo chown www-data /etc/authbind/byport/80		# Important: www-data will be running pm2
+$sudo chmod 755 /etc/authbind/byport/80
 ```
 Create an alias for pm2
-```
+```vim
 $vi ~/.bashrc
 Then add the line below:
 
@@ -168,7 +168,7 @@ $pm2 update
 ```
 #### Automatic Start UP / Reboot
 [Source link](https://pm2.keymetrics.io/docs/usage/startup/)
-```
+```vim
 $pm2 startup
 
 $pm2 save		# Save after setup
@@ -179,7 +179,7 @@ $pm2 resurrect		# Manually bring back previous processes
 Start automatic clustering (This will act like Load Balancer and automatically share connection to spawned processes)
 
 [Source Link](https://pm2.keymetrics.io/docs/usage/quick-start/)
-```
+```vim
 $pm2 start app.js -i max
 
 Other Commands:
@@ -190,14 +190,14 @@ pm2 scale app 2              # Scales `app` up or down to 2 workers total
 ```
 ## Troubleshooting
 Nginx log: Conflict 0.0.0.0:[::]80
-```
+```vim
 Nginx Config should have a server name.
 
 Fix: server_name sample.ph
 ```
 ## Tutorials
 ### Generate Random Strings
-```
+```vim
 $node
 Welcome to Node.js v16.15.0.
 >require("crypto").randomBytes(64).toString("hex")
@@ -206,7 +206,7 @@ Welcome to Node.js v16.15.0.
 ```
 ### Post Man Settings
 Post Request
-```
+```vim
 POST: http://localhost:9999/AccountAuth
 Body: raw: JSON: 
              {
@@ -215,7 +215,7 @@ Body: raw: JSON:
              }
 ```
 Get Request
-```
+```vim
 GET: http://localhost:9999/AccountAuth
 Params: Query Params: 
              key: 'test' value: 'test'
