@@ -16,7 +16,7 @@
 Editable json file
 ```json
 {
-  "name": "Iskomunidad Api",
+  "name": "Wiki Api",
   "version": "1.0.0",
   "description": "Public access of Iskomunidad Api",
   "main": "./server.js",
