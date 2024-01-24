@@ -18,7 +18,7 @@ Editable json file
 {
   "name": "Wiki Api",
   "version": "1.0.0",
-  "description": "Public access of Iskomunidad Api",
+  "description": "Public access of Wiki Api",
   "main": "./server.js",
   "script": {
     "start": "node ./server.js"
