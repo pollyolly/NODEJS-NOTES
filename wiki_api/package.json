@@ -1,5 +1,5 @@
 {
-  "name": "Iskomunidad Api",
+  "name": "Wiki Api",
   "version": "1.0.0",
   "description": "Public access of Wiki Api",
   "main": "./server.js",
