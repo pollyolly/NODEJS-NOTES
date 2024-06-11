@@ -18,13 +18,12 @@ app.listen(port, ()=>{
 	console.log(`Listening to ${port}`);
 })
 
-//Error Handlers
-// custom 404
+//Global HTTP Handlers 
+//Http 404
 app.use((req, res, next) => {
   res.status(404).send("Sorry can't find that!")
 })
-
-// custom 500
+//Http 500
 app.use((err, req, res, next) => {
   console.error(err.stack)
   res.status(500).send('Something broke!')
