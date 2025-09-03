@@ -11,6 +11,11 @@
 [PM2](https://pm2.keymetrics.io/docs/usage/specifics/)
 
 [AuthBind](https://pm2.keymetrics.io/docs/usage/specifics/)
+## Start a Project
+```
+$cd project_folder
+$npm init
+```
 ## Development Setup
 ### package.json
 Editable json file
