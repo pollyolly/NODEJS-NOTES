@@ -1,0 +1,15 @@
+{
+  "name": "license_key_generator",
+  "version": "1.0.0",
+  "main": "license_generator.js",
+  "scripts": {
+    "dev": "node license_generator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security"
+  }
+}
