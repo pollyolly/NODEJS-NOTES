@@ -1,3 +1,7 @@
+### Sign Key
+```
+$node index.js
+```
 ### Generate Key
 openssl 
 ```
