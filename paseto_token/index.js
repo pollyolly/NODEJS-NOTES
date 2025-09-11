@@ -9,8 +9,8 @@ console.log(privateKey.slice(10))
 const privateKeyBuf = V4.bytesToKeyObject(Buffer.from(privateKey.slice(10), 'base64url'))
 const key = crypto.createPrivateKey(privateKeyBuf.export({type:'pkcs8', format: 'pem'}))
 */
-const key = fs.readFileSync('private_key.pem', 'utf8')
-const privateKey = crypto.createPrivateKey(key)
+const privateKey = fs.readFileSync('private_key.pem', 'utf8')
+const key = crypto.createPrivateKey(privateKey)
 const payload = {
 	'testing:claim': 'hello'
 };
