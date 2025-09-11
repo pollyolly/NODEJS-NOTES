@@ -33,7 +33,6 @@ node:internal/crypto/keys:725
            ^
 Error: error:1E08010C:DECODER routines::unsupported
 ```
-Fix
 ```
-Generate appropriate algorithm ed25519 using openssl and generate key of paseto
+Fix: Generate appropriate algorithm ed25519 using openssl and generate key of paseto
 ```
