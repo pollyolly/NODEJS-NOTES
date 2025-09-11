@@ -35,5 +35,5 @@ Error: error:1E08010C:DECODER routines::unsupported
 ```
 Fix
 ```
-Generate appropriate algorithm using the openssl or generate key of paseto
+Generate appropriate algorithm ed25519 using openssl and generate key of paseto
 ```
