@@ -1,3 +1,7 @@
+### NPM Install
+```
+$npm install paseto
+```
 ### Sign Key
 ```
 $node index.js
