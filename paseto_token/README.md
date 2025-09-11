@@ -8,6 +8,10 @@ paseto generate key
 ```
 $node generate_key.js
 ```
+### Verify Key
+```
+$node verify.js
+```
 ### Resources
 
 [paseto](https://github.com/panva/paseto)
