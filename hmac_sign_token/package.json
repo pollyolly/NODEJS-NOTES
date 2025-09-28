@@ -1,0 +1,11 @@
+{
+  "name": "hmac_sign_token",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
