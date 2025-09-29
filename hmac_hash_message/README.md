@@ -5,7 +5,7 @@ Hash the Message
 ```
 ### Create Project
 ```
-$mkdir hmac_sign_token
+$mkdir hmac_hash_message
 $npm init
 ```
 ### Generate Signature
