@@ -1,0 +1,11 @@
+{
+  "name": "hmac_hash_message",
+  "version": "1.0.0",
+  "description": "``` Hash the Message - Combine message with the Secret Key and applies Cryptographic Hash. ``` ### Create Project ``` $mkdir hmac_sign_token $npm init ``` ### Generate Signature ``` $node sign.js ``` ### Compare Signature ``` $node index.js ```",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
