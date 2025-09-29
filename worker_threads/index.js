@@ -10,7 +10,7 @@ function runWorker(){
 
 			worker.on('message', (data)=>{ //Received Data from parentPort.postMessage() 
 				console.log(`Main thread worker received ${data}`);
-				resolve(data);
+				resolve(data); //Worker result
 			});
 			worker.on('error', (reject)=>{
 				console.log(`Main thread worker error ${reject}`);
