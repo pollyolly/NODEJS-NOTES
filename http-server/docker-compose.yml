@@ -1,0 +1,71 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: http-server-web
+#   command: npm start
+    ports:
+      - 80:4000
+    environment:
+      DATABASE_URL: mongodb://db:27017
+    volumes:
+      - http-server-data:/http-server/uploads
+    networks:
+      - http-server-network
+#    depends_on:
+#      - db
+    develop:
+      watch:
+#Action  sync -> changes from host to container matched
+#     rebuild -> automatically rebuild image and replace in running container
+#sync+restart -> ideal when changing config files and dont need updating image but restart main process of container
+#             -> ideal when chaing nginx.conf and database configs
+#      target -> target path in container
+#        path -> path in host or local
+        - path: ./package.json
+          action: rebuild
+        - path: ./package-lock.json
+          action: rebuild
+        - path: ./
+          target: /http-server
+          action: sync
+          ignore:
+            - node_modules/
+  db:
+    image: mongo:latest
+    container_name: http-server-db
+#   restart: always #restart
+#   pull_policy: always #get updated images
+    ports:
+     - 27017:27017
+#   environment:
+#     DATABASE_URL: 
+    volumes:
+      - http-server-mongo:/data/db
+    networks:
+      - http-server-network
+ 
+  nginx:
+# /usr/share/nginx/html/ 
+    image: nginx:latest
+    container_name: http-server-nginx
+#   restart: always
+    ports:
+      - 80:9000
+    volumes:
+      - http-server-nginx:/etc/nginx
+    networks:
+      - http-server-network
+#   develop:
+#     watch:
+#       - action: sync+restart
+#         path: ./nginx.conf
+#         target: /etc/nginx/
+
+volumes:
+  http-server-nginx:
+  http-server-data:
+  http-server-mongo:
+networks:
+  http-server-network:
