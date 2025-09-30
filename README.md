@@ -105,6 +105,7 @@ start server.js               -> server.js (nodejs server file)
 --watch                       -> Enable live update
 --ignore-watch="node_modules" -> Do not read directory
 --log /var/log/nginx/pm2.logs -> Save logs to
+--interpreter none            -> Allow executable files like Single Executable Application (Node Js) or Go Executable file
 ```
 ```vim
 $pm2 list       	# Show pm2 list of processes
