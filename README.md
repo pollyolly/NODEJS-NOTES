@@ -29,7 +29,7 @@ Editable json file
     "start": "node ./server.js"
   },
   "keywords": [],
-  "author": "John Mark",
+  "author": "Pollyolly",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "compression": "^1.7.4",
